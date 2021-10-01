@@ -12,17 +12,7 @@ public class IntegerSort {
 
         if (numbers.size() == 0) {
             return numbers;
-        } else if (numbers.size() == 1) {
-            sorted.add(numbers.get(0));
-        } else if (numbers.size() == 2) {
-            if (numbers.get(0) > numbers.get(1)) {
-                sorted.add(numbers.get(1));
-                sorted.add(numbers.get(0));
-            } else {
-                sorted.add(numbers.get(0));
-                sorted.add(numbers.get(1));
-            }
-        } else if (numbers.size() == 3) {
+        } else {
             Integer l = null;
             Integer m = numbers.get(0);
             Integer h = null;
@@ -35,9 +25,9 @@ public class IntegerSort {
                     h = i;
             }
 
-            sorted.add(l);
+            if (l != null) sorted.add(l);
             sorted.add(m);
-            sorted.add(h);
+            if (h != null) sorted.add(h);
         }
 
         return sorted;
