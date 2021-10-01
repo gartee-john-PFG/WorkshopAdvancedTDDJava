@@ -15,8 +15,11 @@ public class IntegerSortTests {
     @Test void sortTest() {
         List<Integer> emptyList = Lists.newArrayList();
         List<Integer> singleItemList = Lists.newArrayList(1);
+        //  1,2 will already pass...need a failing test
+        List<Integer> twoOutOfOrderList = Lists.newArrayList(2, 1);
 
         assertEquals(Lists.newArrayList(), new IntegerSort().sort(emptyList));
         assertEquals(Lists.newArrayList(1), new IntegerSort().sort(singleItemList));
+        assertEquals(Lists.newArrayList(1, 2), new IntegerSort().sort(twoOutOfOrderList));
     }
 }

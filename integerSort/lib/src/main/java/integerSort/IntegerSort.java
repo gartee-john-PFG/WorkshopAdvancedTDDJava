@@ -12,6 +12,14 @@ public class IntegerSort {
     public List<Integer> sort(List<Integer> numbers) {
         List<Integer> sorted = numbers;
 
+        if(numbers.size() > 1){
+            if(numbers.get(0) > numbers.get(1)){
+                int temp = numbers.get(0);
+                numbers.set(0, numbers.get(1));
+                numbers.set(1, temp);
+            }
+        }
+
         return sorted;
     }
 }
