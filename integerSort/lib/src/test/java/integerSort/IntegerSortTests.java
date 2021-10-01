@@ -13,5 +13,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class IntegerSortTests {
     @Test void sortTests() {
         assertEquals(Lists.newArrayList(), new IntegerSort().sort(Lists.newArrayList()));
+        assertEquals(Lists.newArrayList(1), new IntegerSort().sort(Lists.newArrayList(1)));
     }
 }

@@ -10,6 +10,7 @@ import java.util.List;
 
 public class IntegerSort {
     public List<Integer> sort(List<Integer> numbers) {
-        return Lists.newArrayList();
+        List<Integer> sorted = numbers;
+        return sorted;
     }
 }
