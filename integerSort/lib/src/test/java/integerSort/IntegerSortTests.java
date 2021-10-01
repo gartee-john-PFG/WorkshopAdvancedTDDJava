@@ -18,5 +18,6 @@ class IntegerSortTests {
         assertEquals(Lists.newArrayList(1, 2, 3), new IntegerSort().sort(Lists.newArrayList(2, 1, 3)));
         assertEquals(Lists.newArrayList(1, 2, 3), new IntegerSort().sort(Lists.newArrayList(2, 3, 1)));
         assertEquals(Lists.newArrayList(1, 2, 3), new IntegerSort().sort(Lists.newArrayList(3, 1, 2)));
+        assertEquals(Lists.newArrayList(1, 2, 3), new IntegerSort().sort(Lists.newArrayList(3, 2, 1)));
     }
 }
