@@ -25,9 +25,9 @@ public class IntegerSort {
                     h.add(i);
             }
 
-            if (l != null) sorted.addAll(sort(l));
+            sorted.addAll(sort(l));
             sorted.add(m);
-            if (h != null) sorted.addAll(sort(h));
+            sorted.addAll(sort(h));
         }
 
         return sorted;
