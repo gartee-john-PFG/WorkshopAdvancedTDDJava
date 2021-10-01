@@ -23,15 +23,21 @@ public class IntegerSort {
                 sorted.add(numbers.get(1));
             }
         } else if (numbers.size() == 3) {
+            Integer l = null;
+            Integer m = numbers.get(0);
+            Integer h = null;
+
             if (numbers.get(0) > numbers.get(2)) {
-                sorted.add(numbers.get(2));
-                sorted.add(numbers.get(0));
-                sorted.add(numbers.get(1));
+                l = numbers.get(2);
+                h = numbers.get(1);
             } else {
-                sorted.add(numbers.get(1));
-                sorted.add(numbers.get(0));
-                sorted.add(numbers.get(2));
+                l = numbers.get(1);
+                h = numbers.get(2);
             }
+
+            sorted.add(l);
+            sorted.add(m);
+            sorted.add(h);
         }
 
         return sorted;
