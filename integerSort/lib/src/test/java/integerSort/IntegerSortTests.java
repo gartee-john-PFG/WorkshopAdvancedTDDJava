@@ -14,7 +14,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class IntegerSortTests {
     @Test void sortTest() {
         List<Integer> emptyList = Lists.newArrayList();
+        List<Integer> singleItemList = Lists.newArrayList(1);
 
         assertEquals(Lists.newArrayList(), new IntegerSort().sort(emptyList));
+        assertEquals(Lists.newArrayList(1), new IntegerSort().sort(singleItemList));
     }
 }
