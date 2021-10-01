@@ -27,12 +27,12 @@ public class IntegerSort {
             Integer m = numbers.get(0);
             Integer h = null;
 
-            if (numbers.get(0) > numbers.get(2)) {
-                l = numbers.get(2);
-                h = numbers.get(1);
-            } else {
-                l = numbers.get(1);
-                h = numbers.get(2);
+            for (Integer i : numbers) {
+                if (m > i)
+                    l = i;
+
+                if (m < i)
+                    h = i;
             }
 
             sorted.add(l);
