@@ -10,9 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class IntegerSortTests {
-    @Test void sortTest() {
+    @Test
+    void sortTest() {
         List<Integer> emptyList = Lists.newArrayList();
         List<Integer> singleItemList = Lists.newArrayList(1);
         //  1,2 will already pass...need a failing test
@@ -24,5 +26,23 @@ public class IntegerSortTests {
         assertEquals(Lists.newArrayList(1), new IntegerSort().sort(singleItemList));
         assertEquals(Lists.newArrayList(1, 2), new IntegerSort().sort(twoOutOfOrderList));
         assertEquals(Lists.newArrayList(1, 2, 3), new IntegerSort().sort(threeReverseOrderList));
+
+        List<Integer> unsortedLarge = getList(50000);
+        List<Integer> sortedLarge = new IntegerSort().sort(unsortedLarge);
+
+
+        for (int i = 0; i < unsortedLarge.size() - 1; i++) {
+            assertTrue(sortedLarge.get(i) <= sortedLarge.get(i + 1));
+        }
+    }
+
+    private List<Integer> getList(int size) {
+        List<Integer> newList = new ArrayList<>();
+
+        for (int i = 0; i < size; i++) {
+            newList.add((int) (Math.random() * 10000));
+        }
+
+        return newList;
     }
 }
