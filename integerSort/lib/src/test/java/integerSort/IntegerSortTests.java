@@ -11,8 +11,10 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class IntegerSortTests {
-    @Test void someLibraryMethodReturnsTrue() {
+public class IntegerSortTests {
+    @Test void sortTest() {
+        List<Integer> emptyList = Lists.newArrayList();
 
+        assertEquals(Lists.newArrayList(), new IntegerSort().sort(emptyList));
     }
 }
