@@ -17,11 +17,10 @@ public class IntegerSort {
             Integer m = numbers.get(0);
             List<Integer> h = new ArrayList<>();
 
-            for (Integer i : numbers) {
+            for (Integer i : numbers.subList(1,numbers.size())) {
                 if (m > i)
                     l.add(i);
-
-                if (m < i)
+                else
                     h.add(i);
             }
 
