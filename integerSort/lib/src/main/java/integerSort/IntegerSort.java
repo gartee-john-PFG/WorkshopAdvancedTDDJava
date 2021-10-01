@@ -12,11 +12,13 @@ public class IntegerSort {
     public List<Integer> sort(List<Integer> numbers) {
         List<Integer> sorted = numbers;
 
-        if(numbers.size() > 1){
-            if(numbers.get(0) > numbers.get(1)){
-                int temp = numbers.get(0);
-                numbers.set(0, numbers.get(1));
-                numbers.set(1, temp);
+        for(int size = numbers.size();size > 1; size--){
+            for (int index = 0;index < size - 1;index++) {
+                if (numbers.get(index) > numbers.get(index + 1)) {
+                    int temp = numbers.get(index);
+                    numbers.set(index, numbers.get(index + 1));
+                    numbers.set(index + 1, temp);
+                }
             }
         }
 

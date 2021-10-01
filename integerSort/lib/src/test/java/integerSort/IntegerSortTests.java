@@ -17,9 +17,12 @@ public class IntegerSortTests {
         List<Integer> singleItemList = Lists.newArrayList(1);
         //  1,2 will already pass...need a failing test
         List<Integer> twoOutOfOrderList = Lists.newArrayList(2, 1);
+        //  swapping first pair will already pass...need the smallest in the last position
+        List<Integer> threeReverseOrderList = Lists.newArrayList(3, 2, 1);
 
         assertEquals(Lists.newArrayList(), new IntegerSort().sort(emptyList));
         assertEquals(Lists.newArrayList(1), new IntegerSort().sort(singleItemList));
         assertEquals(Lists.newArrayList(1, 2), new IntegerSort().sort(twoOutOfOrderList));
+        assertEquals(Lists.newArrayList(1, 2, 3), new IntegerSort().sort(threeReverseOrderList));
     }
 }
