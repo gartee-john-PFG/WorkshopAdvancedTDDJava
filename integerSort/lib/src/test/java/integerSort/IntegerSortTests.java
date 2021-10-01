@@ -6,13 +6,12 @@ package integerSort;
 import com.google.common.collect.Lists;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class IntegerSortTests {
-    @Test void someLibraryMethodReturnsTrue() {
-
+    @Test void sortTests() {
+        assertEquals(Lists.newArrayList(), new IntegerSort().sort(Lists.newArrayList()));
     }
 }
