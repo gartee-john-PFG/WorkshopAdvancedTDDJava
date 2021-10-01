@@ -12,24 +12,20 @@ public class IntegerSort {
 
         if (numbers.size() < 2) {
             return numbers;
-        }
-        else if(numbers.size() == 2){
+        } else if (numbers.size() == 2) {
             if (numbers.get(0) > numbers.get(1)) {
                 sorted.add(numbers.get(1));
                 sorted.add(numbers.get(0));
-            }
-            else {
+            } else {
                 sorted.add(numbers.get(0));
                 sorted.add(numbers.get(1));
             }
-        }
-        else if (numbers.size() == 3){
-            if(numbers.get(0) > numbers.get(2)){
+        } else if (numbers.size() == 3) {
+            if (numbers.get(0) > numbers.get(2)) {
                 sorted.add(numbers.get(2));
                 sorted.add(numbers.get(0));
                 sorted.add(numbers.get(1));
-            }
-            else {
+            } else {
                 sorted.add(numbers.get(1));
                 sorted.add(numbers.get(0));
                 sorted.add(numbers.get(2));
