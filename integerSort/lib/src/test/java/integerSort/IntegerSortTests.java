@@ -27,7 +27,7 @@ public class IntegerSortTests {
         assertEquals(Lists.newArrayList(1, 2), new IntegerSort().sort(twoOutOfOrderList));
         assertEquals(Lists.newArrayList(1, 2, 3), new IntegerSort().sort(threeReverseOrderList));
 
-        List<Integer> unsortedLarge = getList(50000);
+        List<Integer> unsortedLarge = getList(25000);
         List<Integer> sortedLarge = new IntegerSort().sort(unsortedLarge);
 
 
