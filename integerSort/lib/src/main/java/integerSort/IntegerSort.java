@@ -13,21 +13,21 @@ public class IntegerSort {
         if (numbers.size() == 0) {
             return numbers;
         } else {
-            Integer l = null;
+            List<Integer> l = new ArrayList<>();
             Integer m = numbers.get(0);
-            Integer h = null;
+            List<Integer> h = new ArrayList<>();
 
             for (Integer i : numbers) {
                 if (m > i)
-                    l = i;
+                    l.add(i);
 
                 if (m < i)
-                    h = i;
+                    h.add(i);
             }
 
-            if (l != null) sorted.add(l);
+            if (l != null) sorted.addAll(l);
             sorted.add(m);
-            if (h != null) sorted.add(h);
+            if (h != null) sorted.addAll(h);
         }
 
         return sorted;
