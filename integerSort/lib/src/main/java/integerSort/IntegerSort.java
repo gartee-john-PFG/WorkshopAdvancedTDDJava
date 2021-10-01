@@ -10,8 +10,10 @@ public class IntegerSort {
     public List<Integer> sort(List<Integer> numbers) {
         List<Integer> sorted = new ArrayList<>();
 
-        if (numbers.size() < 2) {
+        if (numbers.size() == 0) {
             return numbers;
+        } else if (numbers.size() == 1) {
+            sorted.add(numbers.get(0));
         } else if (numbers.size() == 2) {
             if (numbers.get(0) > numbers.get(1)) {
                 sorted.add(numbers.get(1));
