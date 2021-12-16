@@ -14,15 +14,5 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class IntegerSortTests {
     @Test
     void integerSortTests() {
-        assertEquals(Lists.newArrayList(), IntegerSort.sort(new ArrayList<Integer>()));
-        assertEquals(Lists.newArrayList(1), IntegerSort.sort(Lists.newArrayList(1)));
-        assertEquals(Lists.newArrayList(1, 2), IntegerSort.sort(Lists.newArrayList(2, 1)));
-        assertEquals(Lists.newArrayList(1, 2), IntegerSort.sort(Lists.newArrayList(1, 2)));
-        assertEquals(Lists.newArrayList(1, 2, 3), IntegerSort.sort(Lists.newArrayList(2, 1, 3)));
-        assertEquals(Lists.newArrayList(1, 2, 3), IntegerSort.sort(Lists.newArrayList(2, 3, 1)));
-        assertEquals(Lists.newArrayList(1, 2, 3), IntegerSort.sort(Lists.newArrayList(3, 2, 1)));
-        assertEquals(Lists.newArrayList(1, 2, 2, 3), IntegerSort.sort(Lists.newArrayList(3, 2, 2, 1)));
-        assertEquals(Lists.newArrayList(1, 2, 2, 3), IntegerSort.sort(Lists.newArrayList(3, 2, 2, 1)));
-        assertEquals(Lists.newArrayList(1, 1, 2, 2, 3, 3), IntegerSort.sort(Lists.newArrayList(3, 3, 2, 2, 1, 1)));
     }
 }
