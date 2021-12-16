@@ -1,7 +1,7 @@
 ## StringCalc
-String calculator in Python
+String calculator in Java
 Build a method
-```add(string numbers)```
+```add(String numbers)```
 * an empty string will return 0
 * a single number will return that number
 * a comma-delimited pair of numbers returns the sum of those two numbers
